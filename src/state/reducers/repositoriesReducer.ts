@@ -6,7 +6,7 @@ interface ReposiriesState {
 	data: string[];
 }
 
-const reducer = (state: ReposiriesState, action: Action): ReposiriesState => {
+const reposiriesReducer = (state: ReposiriesState, action: Action): ReposiriesState => {
 	switch (action.type) {
 		case ActionType.SEARCH_REPOSITORIES:
 			return { loading: true, error: null, data: [] };
@@ -20,4 +20,4 @@ const reducer = (state: ReposiriesState, action: Action): ReposiriesState => {
 			return state;
 	}
 };
-export default reducer;
+export default reposiriesReducer;
